@@ -1,0 +1,453 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: white;
+}
+
+/*** Ensemble NAV ***/
+/* Style de base pour la navigation */
+nav {
+    background-color: black;
+    height: 44px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 40px;
+    font-size: 12px;
+    height: 44px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #b0b3b5;
+    font-weight: 400;
+    letter-spacing: -.01em;
+}
+
+/* Le logo */
+nav .logo {
+    flex-shrink: 0; /* Empêche le logo de rétrécir */
+}
+
+/* Le menu burger */
+.burger-menu {
+    display: none; /* Cacher par défaut */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    height: 11px;
+}
+
+.burger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #CCD0D2;
+}
+
+@media screen and (max-width: 911px) {
+    nav ul  li:not(.logo) {
+        display: none; /* Cache les éléments `li` dans `.nav-list` */
+    }
+    .logo {
+        display: block;
+    }
+    
+    nav img {
+        display: inline-block; /* Affiche le logo même quand les autres éléments disparaissent */
+    }
+     .burger-menu {
+        display: flex;
+        position: absolute;
+        right: 20px; /* Positionner à droite */
+        top: 12px; /* Positionner au-dessus */
+    }
+    /* Afficher le logo */
+    nav .logo {
+        flex-grow: 1; /* Assure que le logo prend toute la place à gauche */
+    }
+}
+
+
+
+/*** Sous-Nav ***/
+.sous-nav {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 44px;
+    width: 100%;
+}
+
+.titresite1 {
+    color: #CCD0D2;
+    font-size: 20px;
+}
+
+.titresite2 {
+    display: flex;
+    gap: 100px;
+}
+
+.presentation {
+    color: #CCD0D2;
+    font-size: 12px;
+}
+
+.pourquoi {
+    color: white;
+    font-size: 12px;
+}
+
+.titresite2 button {
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    background: #0071e3;
+    color: #fff;
+    border-color: rgba(0, 0, 0, 0);
+    border-radius: 980px;
+    font-size: 10px;
+    line-height: 1.33337;
+    border-style: solid;
+    border-width: 1px;
+    min-width: 25px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    --sk-button-margin-horizontal: 8px;
+    --sk-button-margin-vertical: 8px;
+}
+/* Cacher tous les éléments dans .titresite2 sauf le bouton à partir de 911px */
+
+/* Media Query pour les écrans de 769px et plus */
+@media (min-width: 911px) {
+    
+
+    .titresite1 {
+        font-size: 24px;  /* Augmenter la taille du texte pour les écrans plus grands */
+    }
+
+    .titresite2 {
+        gap: 60px;  /* Augmenter l'espace entre les éléments dans titresite2 */
+    }
+
+    .presentation, .pourquoi {
+        font-size: 14px;  /* Agrandir la taille des polices pour une meilleure lisibilité */
+    }
+
+    .titresite2 button {
+        font-size: 14px; /* Augmenter la taille du texte du bouton */
+        padding-left: 15px; /* Ajuster les paddings du bouton */
+        padding-right: 15px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+}
+
+
+/*** Section WATCH ***/
+.containerWatch {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.imglogowatch {
+    padding-top: 110px;
+    display: flex;
+    justify-content: center;
+}
+
+.textetitre h1 {
+    text-align: center;
+    margin-top: 40px;
+    background: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(107deg, #ffffff, #fe9494);
+    font-size: 100px;
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+}
+
+.imgaccueil {
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.paragrapheaccueil p {
+    padding-left: 16%;
+    padding-right: 16%;
+    background: #ffe1c0;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(120deg, #FFE1C0, #F34199);
+    font-size: 50px;
+    line-height: 1.0714285714;
+    font-weight: 600;
+    letter-spacing: -0.003em;
+}
+
+.filmevent {
+    display: flex;
+    gap: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    padding-left: 16%;
+}
+
+.filmevent a {
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+}
+
+/*** Section SIPS9 ***/
+.SIPS9 {
+    background-color: black;
+    padding-top: 150px;
+}
+
+.titreSectionSIPS9 {
+    padding-left: 230px;
+    font-size: 35px;
+}
+
+.titreSIPS9 h2 {
+    text-align: center;
+    margin-top: 40px;
+    background: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(107deg, #ffffff);
+    font-size: 100px;
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+}
+
+div.imgSIPS9 {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.texteSIPS9 {
+    margin-top: 100px;
+    padding-left: 700px;
+    padding-right: 230px;
+    font-size: 28px;
+    line-height: 1.1428571429;
+    font-weight: 600;
+    letter-spacing: .007em;
+}
+
+/*** Section GESTES ***/
+.geste {
+    background-color: black;
+    padding-top: 150px;
+}
+
+.nomsectiongeste {
+    padding-left: 230px;
+    font-size: 30px;
+    line-height: 1.2105263158;
+    font-weight: 400;
+}
+
+.titregeste h3 {
+    text-align: center;
+    margin-top: 40px;
+    background: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(107deg, #ffffff, );
+    font-size: 80px;
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+}
+
+.grandtitregeste {
+    padding-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    font-size: 170px;
+    font-weight: 500;
+    line-height: 205px;
+    letter-spacing: -8px;
+    color: #1CB4F6;
+}
+
+.textegeste p {
+    padding: 70px;
+    font-size: 19px;
+    line-height: 1.2105263158;
+    font-weight: 500;
+    letter-spacing: .012em;
+    padding-left: 35%;
+    padding-right: 35%;
+}
+
+.imggeste {
+    display: flex;
+    justify-content: center;
+}
+
+.notifications {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*** Media Queries pour rendre le design responsive ***/
+@media screen and (max-width: 1200px) {
+    .sous-nav {
+        gap: 40px;
+    }
+
+    .titresite1, .titresite2 {
+        font-size: 16px;
+    }
+
+    .textetitre h1{
+        font-size: 50px;
+    }
+    .titreSIPS9 h2{
+        font-size: 50px;
+    }
+    .titregeste h3{
+        font-size: 50px;
+    }
+
+    .imgaccueil {
+        padding: 50px;
+    }
+
+    .paragrapheaccueil p {
+        font-size: 30px;
+    }
+
+    .filmevent {
+        gap: 50px;
+    }
+
+    .SIPS9, .geste {
+        padding-top: 100px;
+    }
+
+    .texteSIPS9 {
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 24px;
+    }
+
+    .grandtitregeste {
+        font-size: 120px;
+    }
+
+    .textegeste p {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 10px;
+    }
+
+    .sous-nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .textetitre h1{
+        font-size: 30px;
+    }
+    .titreSIPS9 h2{
+        font-size: 30px;
+    }
+    .titregeste h3{
+        font-size: 30px;
+    }
+
+    .filmevent {
+        flex-direction: column;
+        gap: 20px;
+        font-size: 20px;
+    }
+
+    .texteSIPS9, .textegeste p {
+        font-size: 18px;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .grandtitregeste {
+        font-size: 80px;
+    }
+
+    .imgaccueil img {
+        width: 100%;
+        height: auto;
+    }
+}
+/* Conteneur de la vidéo */
+.video-container {
+    max-width: 70%; /* La vidéo prend la largeur maximale possible */
+    margin: 0 auto; /* Centrer la vidéo horizontalement */
+    border-radius: 15px; /* Bord arrondi pour le conteneur de la vidéo */
+    overflow: hidden; /* Empêcher les coins carrés de déborder */
+    background-color: #000; /* Fond noir autour de la vidéo */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Ombre autour de la vidéo */
+}
+
+/* Vidéo proprement dite */
+.video-container video {
+    width: 100%; /* La vidéo occupe 100% de la largeur du conteneur */
+    height: auto; /* La hauteur est ajustée automatiquement pour conserver les proportions */
+    border-radius: 15px; /* Bord arrondi de la vidéo */
+}
+
+/* Media Queries pour ajuster la taille de la vidéo selon les écrans */
+@media screen and (max-width: 1200px) {
+    .video-container video {
+        height: 400px; /* Hauteur réduite sur les écrans de taille moyenne */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .video-container video {
+        height: 250px; /* Hauteur réduite sur les petits écrans */
+    }
+}
